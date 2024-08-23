@@ -5,7 +5,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
-                    <div class="card-header"><h3>All Porfolios</h3></div>
+                    <div class="card-header"><h3>All Varian Menu</h3></div>
                     <div class="card-group">
                         @foreach($images as $multi)
                             <div class="col-md-4 mt-5">
@@ -33,7 +33,7 @@
                                     <form action="{{ route('store.image') }}" method="POST" enctype="multipart/form-data" >
                                     @csrf
                                             <div class="form-group">
-                                                <label for="exampleInputEmail1">Brand Image</label>
+                                                <label for="exampleInputEmail1">Varian menu</label>
                                                 <input type="file" name="image[]" class="form-control" multiple="" id="exampleInputEmail1" aria-describedby="emailHelp">
                                                 @error('image')
                                                     <span class="text-danger">{{ $message }}</span>

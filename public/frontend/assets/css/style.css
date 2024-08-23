@@ -56,6 +56,55 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.3s ease-in-out;
 }
 
+.promo-background {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #007544; /* Warna latar belakang panjang */
+  padding: 10px 0; /* Jarak atas dan bawah */
+  display: flex;
+  justify-content: center; /* Menempatkan tombol di tengah secara horizontal */
+}
+
+.btn-promo {
+  position: relative; /* Membuat posisi tombol relatif terhadap latar belakang */
+  padding: 10px 20px;
+  font-size: 16px; /* Ukuran font standar */
+  color: #fff;
+  background-color: #007544; /* Warna latar belakang tombol */
+  border-radius: 5px; /* Sudut tombol melengkung */
+  text-decoration: none; /* Menghapus garis bawah pada link */
+  display: flex;
+  align-items: center; /* Menyelaraskan ikon dan teks secara vertikal */
+  gap: 8px; /* Jarak antara ikon dan teks */
+  z-index: 1000; /* Menempatkan tombol di atas elemen lain */
+}
+
+.btn-promo i {
+  font-size: 20px; /* Ukuran ikon */
+}
+
+.btn-promo:hover {
+  background-color: #005a39; /* Warna latar belakang saat hover */
+}
+
+/* Media query untuk perangkat kecil */
+@media (max-width: 767px) {
+  .btn-promo {
+    font-size: 14px; /* Ukuran font lebih kecil untuk perangkat kecil */
+    padding: 8px 16px; /* Padding lebih kecil untuk perangkat kecil */
+  }
+
+  .btn-promo i {
+    font-size: 18px; /* Ukuran ikon lebih kecil untuk perangkat kecil */
+  }
+
+  .promo-background {
+    padding: 8px 0; /* Jarak atas dan bawah lebih kecil pada perangkat kecil */
+  }
+}
+
 /*--------------------------------------------------------------
 # Disable AOS delay on mobile
 --------------------------------------------------------------*/
@@ -68,7 +117,7 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-#header {
+/* #header {
   background: #fff;
   transition: all 0.5s;
   z-index: 997;
@@ -96,7 +145,86 @@ h1, h2, h3, h4, h5, h6 {
 
 #header .logo img {
   max-height: 40px;
+} */
+
+#header {
+  background: #fff;
+  transition: all 0.5s;
+  z-index: 997;
+  padding: 15px 0;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
+
+#header .logo {
+  font-size: 2rem; /* Menggunakan rem untuk ukuran font yang lebih responsif */
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+#header .logo a {
+  color: #111;
+  text-decoration: none;
+}
+
+#header .logo a span {
+  color: #1bbd36;
+}
+
+#header .logo img {
+  max-height: 40px;
+  width: auto;
+}
+
+.nav-menu ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-menu ul li {
+  margin-left: 20px;
+}
+
+.nav-menu ul li a {
+  color: #111;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.header-social-links {
+  display: flex;
+  margin-left: auto;
+}
+
+.header-social-links a {
+  color: #111;
+  margin-left: 10px;
+  font-size: 1.5rem;
+}
+
+/* Media Queries untuk Perangkat Mobile */
+@media (max-width: 768px) {
+  #header .logo {
+    font-size: 1.5rem; /* Sesuaikan ukuran font untuk layar lebih kecil */
+  }
+
+  .nav-menu {
+    display: none; /* Sembunyikan menu navigasi jika tidak diperlukan */
+  }
+
+  .header-social-links a {
+    font-size: 1.2rem; /* Sesuaikan ukuran ikon media sosial */
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -357,7 +485,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
 }
 
-#hero .carousel, #hero .carousel-inner, #hero .carousel-item, #hero .carousel-item::before {
+/* #hero .carousel, #hero .carousel-inner, #hero .carousel-item, #hero .carousel-item::before {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -393,7 +521,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 20px;
   font-size: 28px;
   font-weight: 700;
-}
+} */
 
 #hero .btn-get-started {
   font-family: "Roboto", sans-serif;
@@ -418,7 +546,7 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
 }
 
-#hero .carousel-inner .carousel-item {
+/* #hero .carousel-inner .carousel-item {
   transition-property: opacity;
   background-position: center top;
 }
@@ -504,7 +632,7 @@ h1, h2, h3, h4, h5, h6 {
   #hero .carousel-content p {
     font-size: 15px;
   }
-}
+} */
 
 @media (max-height: 500px) {
   #hero {
@@ -615,7 +743,7 @@ section {
   text-align: center;
   padding: 70px 20px 80px 20px;
   transition: all ease-in-out 0.3s;
-  background: #fff;
+  background: #bfffaf;
 }
 
 .services .icon-box .icon {
@@ -1476,7 +1604,7 @@ section {
   position: relative;
 }
 
-.portfolio-details .portfolio-details-carousel {
+/* .portfolio-details .portfolio-details-carousel {
   position: relative;
   z-index: 1;
 }
@@ -1497,7 +1625,7 @@ section {
 
 .portfolio-details .portfolio-details-carousel .owl-dot.active {
   background-color: #1bbd36 !important;
-}
+} */
 
 .portfolio-details .portfolio-info {
   padding: 30px;

@@ -23,7 +23,7 @@ use Illuminate\Support\Facades\DB;
 |
 */
 Route::get('/email/verify', function () {
-    return view('auth.verify-email');
+    // return view('auth.verify-email');
 })->middleware('auth')->name('verification.notice');
 
 
@@ -34,7 +34,7 @@ Route::get('/', function () {
 
     $images = Multipic::all();
     return view('home', compact('brands', 'about', 'images'));
-});
+})->name('home');
 
 Route::get('/category/all', [CategoryController::class, 'AllCat'])->name('all.category');
 

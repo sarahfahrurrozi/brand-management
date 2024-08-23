@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Company Management</title>
+  <title>Es Teh Khatulistiwa</title>
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
 
@@ -54,6 +54,11 @@
   @include('layouts.body.footer')
 
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+  <div class="promo-background">
+  <a href="https://wa.me/082221200140" class="btn btn-promo" target="_blank">
+     Ambil Promo Sekarang <i class="icofont-whatsapp"></i>
+  </a>
+</div>
 
   <!-- Vendor JS Files -->
   <script src="{{ asset('frontend/assets/vendor/jquery/jquery.min.js') }}"></script>

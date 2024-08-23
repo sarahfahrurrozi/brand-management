@@ -88,12 +88,13 @@
                         </label>
                 
                       </div>
-                      <p><a class="text-blue" href="{{ route('password.request') }}">Forgot Your Password?</a></p>
+                      <!-- <p><a class="text-blue" href="{{ route('password.request') }}">Forgot Your Password?</a></p> -->
                     </div>
-                    <button type="submit" class="btn btn-lg btn-primary btn-block mb-4">Sign In</button>
-                    <p>Don't have an account yet ?
+                    <button type="submit" class="btn btn-lg btn-primary btn-block mb-3">Masuk</button>
+                    <a href="{{ route('home') }}" class="btn btn-lg btn-primary btn-block mb-3">Menu Home</a>
+                    <!-- <p>Don't have an account yet ?
                       <a class="text-blue" href="{{ route('register') }}">Sign Up</a>
-                    </p>
+                    </p> -->
                   </div>
                 </div>
               </form>

@@ -4,29 +4,36 @@
       <div class="container">
         <div class="row">
 
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Company</h3>
+          <div class="col-lg-4 col-md-6 footer-contact">
+            <h3>Es Teh Khatulistiwa</h3>
             <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
+              Solo <br>
+              Jawa Tengah<br>
+              Indonesia <br><br>
+              <strong>whatsapp :</strong> 0822-2120-0140<br>
+              <strong>Email:</strong> estehkhatulistiwa@gmail.com<br>
             </p>
           </div>
 
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
+          <div class="col-lg-4 col-md-6 footer-links">
+            <h4>Links</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Testimoni</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Tentang Kami</a></li>
             </ul>
           </div>
 
-          <div class="col-lg-3 col-md-6 footer-links">
+          <!-- Sosial Media -->
+  <div class="col-lg-4 col-md-6 footer-social">
+    <h4>Follow Us</h4>
+    <div class="social-links">
+      <a href="https://facebook.com" class="facebook" target="_blank"><i class="bx bxl-facebook"></i></a>
+      <a href="https://wa.me/082221200140" class="whatsapp" target="_blank"><i class="bx bxl-whatsapp"></i></a>
+      <a href="https://www.instagram.com/estehkhatulistiwaofficial/" class="instagram" target="_blank"><i class="bx bxl-instagram"></i></a>
+    </div>
+  </div>
+          <!-- <div class="col-lg-3 col-md-6 footer-links">
             <h4>Our Services</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
@@ -43,7 +50,7 @@
             <form action="" method="post">
               <input type="email" name="email"><input type="submit" value="Subscribe">
             </form>
-          </div>
+          </div> -->
 
         </div>
       </div>
@@ -64,11 +71,11 @@
         </div>
       </div>
       <div class="social-links text-center text-md-right pt-3 pt-md-0">
-        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        <a href="https://wa.me/082221200140" class="twitter"><i class="bx bxl-whatsapp"></i></a>
+        {{-- <a href="#" class="facebook?"><i class="bx bxl-facebook"></i></a> --}}
+        <a href="https://www.instagram.com/estehkhatulistiwaofficial/" class="instagram"><i class="bx bxl-instagram"></i></a>
+        {{-- <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> --}}
       </div>
     </div>
   </footer><!-- End Footer -->

@@ -1,27 +1,61 @@
 @extends('layouts.master_home')
  <!-- ======= Slider ======= -->
- @include('layouts.body.slider')
+ <!-- @include('layouts.body.slider') -->
 @section('home_content')
-    
-    <!-- ======= About Us Section ======= -->
-    <section id="about-us" class="about-us">
+@php
+  $sliders = DB::table('sliders')->get();
+
+@endphp
+<section id="about-us" class="about-us">
       <div class="container" data-aos="fade-up">
 
-        <div class="section-title">
-          <h2>About Us</strong></h2>
+        <div class="section-title mb-2">
+          <h2>Promo Menarik</strong></h2>
         </div>
 
-        <div class="row content">
-          <div class="col-lg-6" data-aos="fade-right">
-            <h2>{{ $about->title }}</h2>
-            <h3>{{ $about->short_desc }}</h3>
+        <div class="container">
+
+        
+
+          <div class="row portfolio-container" data-aos="fade-up">
+  
+            
+          @foreach($sliders as $key => $slider)
+            <div class="col-lg-6 col-md-12 portfolio-item filter-web">
+              <img src="{{$slider->image}}" class="img-fluid" alt="">
+            </div>
+          @endforeach
           </div>
-          <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-left">
-            {{ $about->long_desc }}
-          </div>
+  
         </div>
 
       </div>
+    </section><!-- End About Us Section -->
+    <div class="section-title">
+          <h2>Varian Menu</strong></h2>
+        </div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="3000">
+      <ol class="carousel-indicators">
+        @foreach($images as $index => $image)
+          <li data-target="#carouselExampleIndicators" data-slide-to="{{ $index }}" class="{{ $index === 0 ? 'active' : '' }}"></li>
+        @endforeach
+      </ol>
+      <div class="carousel-inner">
+        @foreach($images as $index => $image)
+          <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
+            <img src="{{ $image->image }}" class="d-block w-100" alt="">
+          </div>
+        @endforeach
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
     </section><!-- End About Us Section -->
 
     <!-- ======= Services Section ======= -->
@@ -29,8 +63,8 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Services</strong></h2>
-          <p>We bring the best services possible for our valued customers with the best interests.</p>
+          <h4>KENAPA MEMILIH <p>ES TEH KHATULISTIWA</h4>
+          {{-- <p>We bring the best services possible for our valued customers with the best interests.</p> --}}
         </div>
 
         <div class="row">
@@ -42,8 +76,8 @@
                 </svg>
                 <i class="bx bxl-dribbble"></i>
               </div>
-              <h4><a href="">Digital Marketing</a></h4>
-              <p>At a high level, digital marketing refers to advertising delivered through digital channels such as search engines, websites, social media, email, and mobile apps</p>
+              <h4><a href="">Kualitas Rasa yang Terjamin</a></h4>
+              <p>Es Teh Khatulistiwa menggunakan bahan-bahan berkualitas tinggi yang dipilih dengan teliti untuk memastikan rasa yang segar dan memuaskan di setiap tegukan.</p>
             </div>
           </div>
 
@@ -55,8 +89,8 @@
                 </svg>
                 <i class="bx bx-file"></i>
               </div>
-              <h4><a href="">Mobile App Developement</a></h4>
-              <p>Mobile app development is the act or process by which a mobile app is developed for mobile devices, such as personal digital assistants, enterprise digital assistants or mobile phones</p>
+              <h4><a href="">Teh Asli Berkualitas Tinggii</a></h4>
+              <p>Kami menggunakan teh asli yang dipilih secara cermat dari sumber terpercaya untuk memastikan setiap tegukan penuh dengan rasa teh yang otentik dan berkualitas.</p>
             </div>
           </div>
 
@@ -68,8 +102,8 @@
                 </svg>
                 <i class="bx bx-tachometer"></i>
               </div>
-              <h4><a href="">Software Development</a></h4>
-              <p>The user is often the focus of interaction with their device, and the interface entails components of both hardware and software</p>
+              <h4><a href="">Inovasi Rasa Bervariasi</a></h4>
+              <p>Menyediakan varian rasa musiman yang diperbarui secara berkala, memberikan pengalaman baru dan menarik bagi pelanggan setiap saat.</p>
             </div>
           </div>
 
@@ -81,51 +115,51 @@
                 </svg>
                 <i class="bx bx-layer"></i>
               </div>
-              <h4><a href="">Web Development</a></h4>
-              <p>Web development is the work involved in developing a Web site for the Internet</p>
+              <h4><a href="">Promo Paket Usaha</a></h4>
+              <p>Kami menawarkan promo paket usaha khusus untuk mitra bisnis yang ingin memulai usaha dengan produk kami. </p>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
-            <div class="icon-box iconbox-red">
-              <div class="icon">
-                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,532.3542879108572C369.38199826031484,532.3153073249985,429.10787420159085,491.63046689027357,474.5244479745417,439.17860296908856C522.8885846962883,383.3225815378663,569.1668002868075,314.3205725914397,550.7432151929288,242.7694973846089C532.6665558377875,172.5657663291529,456.2379748765914,142.6223662098291,390.3689995646985,112.34683881706744C326.66090330228417,83.06452184765237,258.84405631176094,53.51806209861945,193.32584062364296,78.48882559362697C121.61183558270385,105.82097193414197,62.805066853699245,167.19869350419734,48.57481801355237,242.6138429142374C34.843463184063346,315.3850353017275,76.69343916112496,383.4422959591041,125.22947124332185,439.3748458443577C170.7312796277747,491.8107796887764,230.57421082200815,532.3932930995766,300,532.3542879108572"></path>
-                </svg>
-                <i class="bx bx-slideshow"></i>
-              </div>
-              <h4><a href="">Logo Design</a></h4>
-              <p>Free logo maker for entrepreneurs, small businesses, freelancers and organizations</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
-            <div class="icon-box iconbox-teal">
-              <div class="icon">
-                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,566.797414625762C385.7384707136149,576.1784315230908,478.7894351017131,552.8928747891023,531.9192734346935,484.94944893311C584.6109503024035,417.5663521118492,582.489472248146,322.67544863468447,553.9536738515405,242.03673114598146C529.1557734026468,171.96086150256528,465.24506316201064,127.66468636344209,395.9583748389544,100.7403814666027C334.2173773831606,76.7482773500951,269.4350130405921,84.62216499799875,207.1952322260088,107.2889140133804C132.92018162631612,134.33871894543012,41.79353780512637,160.00259165414826,22.644507872594943,236.69541883565114C3.319112789854554,314.0945973066697,72.72355303640163,379.243833228382,124.04198916343866,440.3218312028393C172.9286146004772,498.5055451809895,224.45579914871206,558.5317968840102,300,566.797414625762"></path>
-                </svg>
-                <i class="bx bx-arch"></i>
-              </div>
-              <h4><a href="">Graphical Design</a></h4>
-              <p>Graphic design is a craft where professionals create visual content to communicate messages</p>
-            </div>
-          </div>
 
         </div>
 
       </div>
     </section><!-- End Services Section -->
+    <section id="about-us" class="about-us">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title mb-2">
+          <h2>Testimoni</strong></h2>
+        </div>
+
+        <div class="container">
+
+        
+
+          <div class="row portfolio-container" data-aos="fade-up">
+  
+            
+          @foreach($sliders as $key => $slider)
+            <div class="col-lg-6 col-md-12 portfolio-item filter-web">
+              <img src="{{$slider->image}}" class="img-fluid" alt="">
+            </div>
+          @endforeach
+          </div>
+  
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
 
     <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio">
+    <!-- <section id="portfolio" class="portfolio">
       <div class="container">
 
         <div class="section-title" data-aos="fade-up">
           <h2>Portfolio</h2>
         </div>
 
-        <!-- <div class="row" data-aos="fade-up">
+        <<div class="row" data-aos="fade-up">
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">All</li>
@@ -136,7 +170,7 @@
           </div>
         </div> -->
 
-        <div class="row portfolio-container" data-aos="fade-up">
+        <!-- <div class="row portfolio-container" data-aos="fade-up">
 
         
           @foreach($images as $image)
@@ -149,17 +183,17 @@
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
-          @endforeach
-        </div>
+          @endforeach -->
+        <!-- </div>
 
-      </div>
-    </section><!-- End Portfolio Section -->
+      </div> --> 
+    <!-- </section>End Portfolio Section -->
 
     <!-- ======= Our Clients Section ======= -->
     <section id="clients" class="clients">
       <div class="container" data-aos="fade-up">
 
-        <div class="section-title">
+        {{-- <div class="section-title">
           <h2>Brands</h2>
         </div>
 
@@ -175,7 +209,8 @@
           
           
 
-      </div>
+      </div> --}}
     </section><!-- End Our Clients Section -->
 @endsection
 <!-- End #main -->
+ 

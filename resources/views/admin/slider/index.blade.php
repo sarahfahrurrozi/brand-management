@@ -6,8 +6,8 @@
             <div class="row">
                     
             <div class="col-md-12">
-            <h3 align="center">Home Slider</h3>
-                <a href="{{ route('add.slider') }}"><button class="btn btn-info">Add Slider</button></a>
+            <h3 align="center">Promo Dan Paket Usaha</h3>
+                <a href="{{ route('add.slider') }}"><button class="btn btn-info">Add gambar</button></a>
                         @if(session('success'))
                         <div class="alert alert-success alert-dismissible fade show" role="alert">
                             <strong>{{ session('success') }}</strong>
@@ -19,7 +19,7 @@
                     <div class="card">
 
                         
-                        <div class="card-header">All Sliders</div>
+                        <div class="card-header">Semua Gambar</div>
                    
 
                         <table class="table">

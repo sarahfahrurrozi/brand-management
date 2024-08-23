@@ -41,31 +41,31 @@
                       data-parent="#sidebar-menu">
                       <div class="sub-menu">
                           
-                          <li  class="active" >
+                          <!-- <li  class="active" >
                               <a class="sidenav-item-link" href="{{ route('all.brand') }}">
                                 <span class="nav-text">Home Brand</span>
                                 
                               </a>
-                            </li>
+                            </li> -->
                             <li  class="active" >
                               <a class="sidenav-item-link" href="{{ route('multi.image') }}">
-                                <span class="nav-text">Home Porfolio</span>
+                                <span class="nav-text">Varian Menu</span>
                                 
                               </a>
                             </li>
                             
                             
-                            <li  class="active" >
+                            <!-- <li  class="active" >
                               <a class="sidenav-item-link" href="{{ route('home.about') }}">
                                 <span class="nav-text">Home About</span>
                                 
                               </a>
-                            </li>
+                            </li> -->
 
 
                             <li  class="active" >
                               <a class="sidenav-item-link" href="{{ route('home.slider') }}">
-                                <span class="nav-text">Slider</span>
+                                <span class="nav-text">Promo dan Paket Usaha</span>
                                 
                               </a>
                             </li>
@@ -78,7 +78,7 @@
                 
 
                 
-                  <!-- <li  class="has-sub" >
+                  <li  class="has-sub" >
                     <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#ui-elements"
                       aria-expanded="false" aria-controls="ui-elements">
                       <i class="mdi mdi-folder-multiple-outline"></i>
@@ -104,7 +104,7 @@
                       </div>
                     </ul>
                   </li>
-                 -->
+                
 
                 
 
@@ -171,7 +171,7 @@
                             <div class="sub-menu">
                               
                               <li >
-                                <a href="sign-in.html">Sign In</a>
+                                <a href="sign-in.html"></a>
                               </li>
                               
                               <li >
